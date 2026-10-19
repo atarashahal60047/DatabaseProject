@@ -17,3 +17,7 @@
 
 ### 4. מסך חלוקה וניפוק (Dispensing)
 <img width="311" height="233" alt="image" src="https://github.com/user-attachments/assets/fb8cc37f-a5bd-405d-8af7-501af3a7656b" />
+
+
+
+
