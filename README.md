@@ -68,7 +68,7 @@
 | `InventoryID` | INT | PK | מזהה פריט במלאי |
 | `QuantityInStock` | INT | - | כמות במלאי (חייב להיות גדול או שווה ל-0) |
 | `MinimumThreshold` | INT | - | רף מינימלי להתראה על חוסר במלאי |
-| `BatchNumber` | VARCHAR(50) | - | מספר אצווה (Batch) של התרופה |
+| `BatchNumber` | VARCHAR(50) | - |   מספר אצווה של התרופה |
 | `ExpirationDate` | DATE | - | תאריך תפוגה של התרופה |
 
 ### טבלת תרופות (MEDICATION)
