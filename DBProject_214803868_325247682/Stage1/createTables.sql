@@ -1,11 +1,12 @@
 CREATE TABLE WARD
 (
-  WardID INT NOT NULL,
-  Floor INT NOT NULL, --
-  WardType VARCHAR(50) NOT NULL,
-  Capacity INT NOT NULL,--
-  HeadNumID CHAR(9) NOT NULL,
-  Phone VARCHAR(15) NOT NULL, 
+    WardID INT NOT NULL,
+    Floor INT NOT NULL CHECK (Floor > -7 AND Floor < 10), 
+    WardType VARCHAR(50) NOT NULL,
+    Capacity INT NOT NULL CHECK (Capacity > 0), 
+    HeadNumID CHAR(9) NOT NULL,
+    Phone VARCHAR(15) NOT NULL,
+    PRIMARY KEY (WardID)
 );
 
 CREATE TABLE PATIENT
@@ -14,7 +15,7 @@ CREATE TABLE PATIENT
   FirstName VARCHAR(50) NOT NULL,
   LastName VARCHAR(50) NOT NULL,
   DateOfBirth DATE NOT NULL, 
-  Gender VARCHAR(10) NOT NULL, --
+  Gender VARCHAR(10) NOT NULL DEFAULT 'Female' CHECK (Gender IN ('Male', 'Female')),
   Phone VARCHAR(15) NOT NULL,
   Address VARCHAR(100) NOT NULL,
   WardID INT NOT NULL,
