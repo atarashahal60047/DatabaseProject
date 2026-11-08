@@ -31,17 +31,26 @@
 * **קישור לאפליקציה ב-AI Studio:** [צפייה במערכת ב-AI Studio](https://ai.studio/apps/d51ad7f2-c96a-4964-867f-897af97771a4)
 
 ### צילומי מסך של האפיון:
+
 1. **מסך ראשי (Dashboard)**
-   <img width="314" height="383" alt="image" src="https://github.com/user-attachments/assets/508b52e0-500d-4846-8f8d-3a5390931498" />
+   <div align="center">
+     <img width="600" alt="Dashboard" src="https://github.com/user-attachments/assets/508b52e0-500d-4846-8f8d-3a5390931498" />
+   </div>
 
 2. **מסך ניהול תרופות ומלאי (Medications & Inventory)**
-   <img width="308" height="347" alt="image" src="https://github.com/user-attachments/assets/e4bf7b2e-86fd-4097-a95e-4a5511ed1df9" />
+   <div align="center">
+     <img width="600" alt="Medications and Inventory" src="https://github.com/user-attachments/assets/e4bf7b2e-86fd-4097-a95e-4a5511ed1df9" />
+   </div>
 
 3. **מסך ניהול מרשמים (Prescriptions)**
-   <img width="307" height="258" alt="image" src="https://github.com/user-attachments/assets/aee21311-4831-4526-b922-3bd6a5f2e277" />
+   <div align="center">
+     <img width="600" alt="Prescriptions" src="https://github.com/user-attachments/assets/aee21311-4831-4526-b922-3bd6a5f2e277" />
+   </div>
 
 4. **מסך חלוקה וניפוק (Dispensing)**
-   <img width="311" height="233" alt="image" src="https://github.com/user-attachments/assets/fb8cc37f-a5bd-405d-8af7-501af3a7656b" />
+   <div align="center">
+     <img width="600" alt="Dispensing" src="https://github.com/user-attachments/assets/fb8cc37f-a5bd-405d-8af7-501af3a7656b" />
+   </div>
 
 ---
 
@@ -49,10 +58,14 @@
 להלן מודל הנתונים העיצוב (ERD) ודיאגרמת מבנה הנתונים (DSD) של המערכת:
 
 * **תרשים ERD:**
-  <img width="5025" height="2028" alt="erdplus (5)" src="https://github.com/user-attachments/assets/7a58bac1-dc3e-46d9-9ad6-be7bb6ef5562" />
+  <div align="center">
+    <img width="800" alt="ERD Diagram" src="https://github.com/user-attachments/assets/7a58bac1-dc3e-46d9-9ad6-be7bb6ef5562" />
+  </div>
 
 * **תרשים DSD (בסיס הנתונים):**
-  <img width="4512" height="1797" alt="erdplus (6)" src="https://github.com/user-attachments/assets/8846d2c1-d931-4a8e-a5cd-419844f598e2" />
+  <div align="center">
+    <img width="800" alt="DSD Schema" src="https://github.com/user-attachments/assets/8846d2c1-d931-4a8e-a5cd-419844f598e2" />
+  </div>
 
 ---
 
@@ -134,9 +147,9 @@
 | `DispenseStatus` | VARCHAR(20) | - | סטטוס הניפוק (למשל: בוצע, ממתין) |
 
 ### טבלאות ירושה של תרופות (REGULARMED, FRIDGEMED, SPECIALMED)
-- **`REGULARMED`**: מכילה תרופות רגילות (`MedicationCode` משמש כ-PK וכ-FK לטבלת `MEDICATION`).
-- **`FRIDGEMED`**: מכילה תרופות הדורשות קירור, כולל טווח טמפרטורות (`TempRange`) ומזהה מקרר (`FridgeID`).
-- **`SPECIALMED`**: מכילה תרופות מיוחדות/מפוקחות, כולל קוד כספת (`SafeCode`).
+* **`REGULARMED`**: טבלה המכילה תרופות רגילות, כאשר השדה `MedicationCode` משמש כמפתח ראשי (PK) וכמפתח זרה (FK) המקושר לטבלת האב `MEDICATION`.
+* **`FRIDGEMED`**: טבלה המכילה תרופות הדורשות קירור, הכוללת את טווח הטמפרטורות הנדרש (`TempRange`) ואת מזהה המקרר (`FridgeID`).
+* **`SPECIALMED`**: טבלה המכילה תרופות מיוחדות ומפוקחות, הכוללת את קוד הכספת (`SafeCode`).
 
 ### טבלת מרשמים (PRESCRIPTION)
 | שם השדה | סוג נתון | מפתח | תיאור השדה |
