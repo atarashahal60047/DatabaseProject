@@ -198,6 +198,11 @@
 * **יישום בפרויקט:** יצירת מעל 20,000 רשומות בטבלאות `DISPENSING` ו-`PRESCRIPTION` וקובצי ה-SQL הנגזרים מהם.
 * **צילום מסך נדרש בתיקייה:** צילום מסך של הרצת קוד הפייתון במסוף (Terminal) המציג את הודעת ההצלחה (`Success! Generated 20,000 dispensing records...`), וצילום תוצאת השאילתה ב-DB שמאמתת את קיום הנתונים.
 
+
+<img width="550" height="170" alt="image (7)" src="https://github.com/user-attachments/assets/7b052475-3e5e-4f21-b446-ba65de79a71c" />
+
+<img width="539" height="126" alt="image (6)" src="https://github.com/user-attachments/assets/68cdd72a-5cb1-4d50-be48-0c760cdc3f24" />
+
 ### שיטה 3: טעינת נתונים מקבצים חיצוניים / Bulk Import (CSV)
 * **תיאור:** ייבוא המוני (Bulk Insert / Import Wizard) של קבצי נתונים חיצוניים מובנים (כגון קובץ המלאי `MEDWAREHOUSE.csv` או נתונים ממערכות חיצוניות כגון Mockaroo) אל תוך טבלאות מסד הנתונים.
 * **יישום בפרויקט:** טעינת קובץ המחסן (`MEDWAREHOUSE.csv`) המכיל את נתוני המלאי ההתחלתיים (500 רשומות) באמצעות כלי הייבוא המובנה ב-DB.
