@@ -20,3 +20,4 @@ INSERT INTO WARD (WardID, Floor, WardType, Capacity, HeadNumID, Phone) VALUES
 (18, 3, 'Plastic Surgery', 20, '889012345', '02-1919191'),
 (19, 4, 'Ophthalmology', 25, '990123456', '02-2020202'),
 (20, 5, 'Gastroenterology', 22, '101234567', '02-2121212');
+
