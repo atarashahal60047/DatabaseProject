@@ -191,22 +191,27 @@
 ### שיטה 1: הכנסה ידנית / פקודות DML פרטניות (Manual / Direct INSERT)
 * **תיאור:** שימוש בפקודות `INSERT` ישירות (או בסקריפטים קטנים המכילים נתוני בסיס סטטיים) עבור טבלאות קטנות או נתוני התחלתיים.
 * **יישום בפרויקט:** הכנסת נתוני תשתית או מחלקות ראשוניות.
-* **צילום מסך נדרש בתיקייה:** צילום מסך של הרצת פקודות `INSERT` ידניות בכלי הניהול (כגון MySQL Workbench / SSMS) עם חיווי ההצלחה.
+
+<img width="584" height="232" alt="צילום מסך 2026-11-18 191405" src="https://github.com/user-attachments/assets/37d72f17-6092-4cad-b567-aade36e4a9c2" />
+
+<img width="566" height="83" alt="צילום מסך 2026-11-18 191356" src="https://github.com/user-attachments/assets/c5a77b16-6b67-4c58-9b12-38b7fba643a0" />
+
 
 ### שיטה 2: ייבוא אוטומטי באמצעות סקריפטי פייתון / Data Seeding Scripts
 * **תיאור:** כתיבת סקריפטים מותאמים אישית (לדוגמה, סקריפטים בפייתון כמו `generate_dispensing.py`, `generate_prescriptions.py` וסביבות ייעודיות) המייצרים אוטומטית אלפי רשומות ריאליסטיות תוך שמירה מלאה על אילוצי שלמות נתונים (Foreign Keys, Primary Keys).
 * **יישום בפרויקט:** יצירת מעל 20,000 רשומות בטבלאות `DISPENSING` ו-`PRESCRIPTION` וקובצי ה-SQL הנגזרים מהם.
-* **צילום מסך נדרש בתיקייה:** צילום מסך של הרצת קוד הפייתון במסוף (Terminal) המציג את הודעת ההצלחה (`Success! Generated 20,000 dispensing records...`), וצילום תוצאת השאילתה ב-DB שמאמתת את קיום הנתונים.
 
+<img width="570" height="362" alt="צילום מסך 2026-11-18 191807 (1)" src="https://github.com/user-attachments/assets/786fb8b0-06ca-41c4-be7e-c3a0181dd443" />
 
-<img width="550" height="170" alt="image (7)" src="https://github.com/user-attachments/assets/7b052475-3e5e-4f21-b446-ba65de79a71c" />
+<img width="304" height="250" alt="צילום מסך 2026-11-18 191948 (1)" src="https://github.com/user-attachments/assets/18bdcf53-a037-4c01-8ead-678ef102e085" />
 
-<img width="539" height="126" alt="image (6)" src="https://github.com/user-attachments/assets/68cdd72a-5cb1-4d50-be48-0c760cdc3f24" />
 
 ### שיטה 3: טעינת נתונים מקבצים חיצוניים / Bulk Import (CSV)
 * **תיאור:** ייבוא המוני (Bulk Insert / Import Wizard) של קבצי נתונים חיצוניים מובנים (כגון קובץ המלאי `MEDWAREHOUSE.csv` או נתונים ממערכות חיצוניות כגון Mockaroo) אל תוך טבלאות מסד הנתונים.
 * **יישום בפרויקט:** טעינת קובץ המחסן (`MEDWAREHOUSE.csv`) המכיל את נתוני המלאי ההתחלתיים (500 רשומות) באמצעות כלי הייבוא המובנה ב-DB.
-* **צילום מסך נדרש בתיקייה:** צילום מסך של אשף הייבוא (Import Wizard) בכלי הניהול בזמן בחירת קובץ ה-CSV והמיפוי לעמודות הטבלה.
+
+
+<img width="598" height="158" alt="צילום מסך 2026-11-18 192627" src="https://github.com/user-attachments/assets/71b9ec64-d301-4aed-8c0a-b87fea207602" />
 
 ---
 
@@ -218,6 +223,16 @@
   * הופק קובץ גיבוי מלא (Backup Dump / `.bak` / `.sql`) של המסד הכולל את כלל הטבלאות ואת נפח הנתונים המלא (מעל 20,000 הרשומות).
   * *צילום מסך נדרש:* צילום מסך של תהליך הפקת הגיבוי בכלי הניהול (למשל חלון ה-Backup Database) והודעת הסיום המוצלחת.
 
+
+<img width="539" height="400" alt="צילום מסך 2026-11-18 182615" src="https://github.com/user-attachments/assets/25d1386c-9e84-40f9-8b39-b2c09e176154" />
+
+<img width="419" height="99" alt="צילום מסך 2026-11-18 182629" src="https://github.com/user-attachments/assets/65fe4d45-1621-4c19-a9ef-ba3003775aa3" />
+
+
 * **תהליך השחזור (Restore):**
   * מסד הנתונים שוחזר בהצלחה מתוך קובץ הגיבוי שיצרנו לסביבה נקיז, ונבדקה תקינות השליפות (`SELECT COUNT(*)`) כדי לוודא שכל 20,000+ הרשומות חזרו לשלמותן.
-  * *צילום מסך נדרש:* צילום מסך של תהליך השחזור (Restore Database) והרצת שאילתת אימות לאחר השחזור.
+
+<img width="313" height="185" alt="צילום מסך 2026-11-18 185215" src="https://github.com/user-attachments/assets/e6563d16-57a6-4101-811f-0e70c1bda984" />
+
+<img width="163" height="61" alt="צילום מסך 2026-11-18 185315" src="https://github.com/user-attachments/assets/8482aa85-9ffe-4388-bd31-7aa9fbbd3187" />
+
