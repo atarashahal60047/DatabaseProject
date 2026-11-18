@@ -62,7 +62,7 @@ CREATE TABLE DISPENSING
   DispenseID INT NOT NULL,
   PharmacistName VARCHAR(50) NOT NULL,
   DispenseDate DATE NOT NULL,  
-  QuantityDispensed INT NOT NULL CHECK (QuantityDispensed > 0), -- אילוץ: חייבים לנפק לפחות 1
+  QuantityDispensed INT NOT NULL CHECK (QuantityDispensed > 0), 
   DispenseStatus VARCHAR(20) NOT NULL,
   PRIMARY KEY (DispenseID)
 );
